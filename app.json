@@ -1,0 +1,82 @@
+{
+    "name": "Bot File Forced",
+    "description": "A Telegram Files Store Bot in Pyrogram",
+    "keywords": [
+        "telegram",
+        "files",
+        "store",
+        "bot"
+    ],
+    "repository": "https://github.com/iamfth/BotFileForced",
+    "website": "https://telegram.dog/xrinhere",
+    "success_url": "https://t.me/paradisesid",
+    "env": {
+        "API_ID": {
+            "description": "Get this value from my.telegram.org or @TeleORG_Bot",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "Get this value from my.telegram.org or @TeleORG_Bot",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "Get this from @BotFather XD",
+            "required": true
+        },
+        "BOT_USERNAME": {
+            "description": "Your Bot Username which you sent to @BotFather (Without [@])",
+            "required": true
+        },
+        "DB_CHANNEL": {
+            "description": "The Channel ID which will be used as Database. Example: -100123456789",
+            "required": true
+        },
+        "BOT_OWNER": {
+            "description": "Bot Owner UserID",
+            "required": true,
+            "value": "1669508271"
+        },
+        "DATABASE_URL": {
+            "description": "MongoDB Database URI for Saving UserID for Broadcast.",
+            "required": true,
+            "value": ""
+        },
+        "UPDATES_CHANNEL": {
+            "description": "ID of a Channel which you want to do Force Sub to use the bot. Example: -100123456789",
+            "required": false
+        },
+        "LOG_CHANNEL": {
+            "description": "Logs Channel ID for some Tracking XD. Example: -100123456789",
+            "required": true
+        },
+        "BANNED_USERS": {
+            "description": "Banned unwanted members",
+            "required": false
+        },
+        "BANNED_CHAT_IDS": {
+            "description": "Banned unwanted channel IDs",
+            "required": false
+        },
+        "BROADCAST_AS_COPY": {
+            "description": "Broadcast with Forward Tag or as Copy(Without Forward Tag). Value should be True/False !!",
+            "required": true,
+            "value": "True"
+        },
+        "FORWARD_AS_COPY": {
+            "description": "If True all messages will be forwarder As Copy. If False all messages will be forwarder with Forward Tag. Value should be True/False !!",
+            "required": true,
+            "value": "True"
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
